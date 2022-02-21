@@ -14,5 +14,6 @@ target_link_libraries(wasmedgeVM
   wasmedgeExecutor
   wasmedgeHostModuleWasi
   wasmedgeHostModuleWasmEdgeProcess
+  wasmedgeCounterFuncExample
   wasmedgeHostModuleHostFuncExample
 )
