@@ -4,3 +4,4 @@
 add_subdirectory(wasi)
 add_subdirectory(wasmedge_process)
 add_subdirectory(host_function_example)
+add_subdirectory(host_example_counter)
