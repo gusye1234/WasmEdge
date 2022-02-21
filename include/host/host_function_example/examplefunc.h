@@ -42,5 +42,12 @@ public:
   Expect<void> body(Runtime::Instance::MemoryInstance *MemInst);
 };
 
+// class HostFuncExamplePrompt : public HostFuncExample<HostFuncExamplePrint> {
+// public:
+//   HostFuncExamplePrint(HostFuncExampleEnvironment &HostEnv)
+//       : HostFuncExample(HostEnv) {}
+//   Expect<void> body(Runtime::Instance::MemoryInstance *MemInst);
+// };
+
 } // namespace Host
 } // namespace WasmEdge
