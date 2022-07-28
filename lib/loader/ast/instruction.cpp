@@ -988,6 +988,14 @@ Expect<void> Loader::checkInstrProposals(OpCode Code, uint64_t Offset) {
       return logNeedProposal(ErrCode::IllegalOpCode, Proposal::Threads, Offset,
                              ASTNodeAttr::Instruction);
     }
+  } else if (Code >= OpCode::Try && Code <= OpCode::Rethrow ||
+             Code == OpCode::Delegate || Code == OpCode::Catch_call) {
+    // These instructions are for ExceptionHandling proposal.
+    if (!Conf.hasProposal(Proposal::ExceptionHandling)) {
+      return logNeedProposal(ErrCode::IllegalOpCode,
+                             Proposal::ExceptionHandling, Offset,
+                             ASTNodeAttr::Instruction);
+    }
   }
   return {};
 }
